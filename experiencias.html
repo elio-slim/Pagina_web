@@ -16,16 +16,30 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="brand">Wanderly<span class="brand-dot">.</span></a>
-      <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="siteNav">
-        <span></span><span></span><span></span>
-      </button>
+
+      <form class="search-form" role="search" action="buscar.html" method="get">
+        <label for="buscador" class="visually-hidden">Buscar destinos y paquetes</label>
+        <input type="search" id="buscador" name="q" placeholder="Buscar destinos, paquetes…" autocomplete="off" />
+        <button type="submit" class="search-btn" aria-label="Buscar"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      </form>
+
+      <div class="header-actions">
+        <a href="login.html" class="icon-link" id="cuentaEnlace"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg><span class="icon-label" id="cuentaEtiqueta">Ingresar</span></a>
+        <button type="button" class="icon-link link-salir" id="btnSalir" hidden>Salir</button>
+        <a href="carrito.html" class="icon-link" id="cartLink" aria-label="Carrito de compras, 0 personas en total"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2.5l2.2 11h10.6l2-8H6.5"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg><span class="cart-badge" id="cartCount" data-vacio="true">0</span></a>
+        <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="siteNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav-bar">
       <nav class="site-nav" id="siteNav" aria-label="Navegación principal">
-      <a href="index.html">Inicio</a>
-      <a href="destinos.html">Destinos</a>
-      <a href="experiencias.html" aria-current="page">Experiencias</a>
-      <a href="paquetes.html">Paquetes</a>
-      <a href="nosotros.html">Nosotros</a>
-      <a href="contacto.html" class="nav-cta">Contacto</a>
+          <a href="index.html">Inicio</a>
+          <a href="destinos.html">Destinos</a>
+          <a href="experiencias.html" aria-current="page">Experiencias</a>
+          <a href="paquetes.html">Paquetes</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="contacto.html" class="nav-cta">Contacto</a>
       </nav>
     </div>
   </header>
@@ -41,7 +55,7 @@
 
     <section class="container" aria-label="Listado de experiencias">
       <article class="exp-row">
-        <img class="exp-thumb" src="img/atacama.svg" alt="Cielo estrellado sobre el desierto de Atacama" width="800" height="600" loading="lazy" />
+        <img class="exp-thumb" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Atacama_Desert_(13340986003).jpg?width=1400" alt="Cielo estrellado sobre el desierto de Atacama" width="800" height="600" loading="lazy" />
         <div>
           <span class="tag">Astronomía</span>
           <h3>Observación de estrellas en Atacama</h3>
@@ -51,7 +65,7 @@
       </article>
 
       <article class="exp-row">
-        <img class="exp-thumb" src="img/torres-del-paine.svg" alt="Torres de granito de Torres del Paine" width="800" height="600" loading="lazy" />
+        <img class="exp-thumb" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Torres-del-paine.jpg?width=1400" alt="Torres de granito de Torres del Paine" width="800" height="600" loading="lazy" />
         <div>
           <span class="tag">Trekking</span>
           <h3>Circuito W corto en Torres del Paine</h3>
@@ -61,7 +75,7 @@
       </article>
 
       <article class="exp-row">
-        <img class="exp-thumb" src="img/chiloe.svg" alt="Palafitos de colores en Chiloé" width="800" height="600" loading="lazy" />
+        <img class="exp-thumb" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Palafitos_Chiloe.jpg?width=1400" alt="Palafitos de colores en Chiloé" width="800" height="600" loading="lazy" />
         <div>
           <span class="tag">Gastronomía</span>
           <h3>Curanto al hoyo en Chiloé</h3>
@@ -71,7 +85,7 @@
       </article>
 
       <article class="exp-row">
-        <img class="exp-thumb" src="img/cartagena.svg" alt="Casas coloniales de Cartagena al atardecer" width="800" height="600" loading="lazy" />
+        <img class="exp-thumb" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Cartagena_Old_City.JPG?width=1400" alt="Casas coloniales de Cartagena al atardecer" width="800" height="600" loading="lazy" />
         <div>
           <span class="tag">Historia</span>
           <h3>City tour amurallado en Cartagena</h3>
@@ -81,7 +95,7 @@
       </article>
 
       <article class="exp-row">
-        <img class="exp-thumb" src="img/valle-sagrado.svg" alt="Terrazas circulares de Moray en el Valle Sagrado" width="800" height="600" loading="lazy" />
+        <img class="exp-thumb" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Sacred_Valley_(around_Pisaq),_Peru.jpg?width=1400" alt="Terrazas circulares de Moray en el Valle Sagrado" width="800" height="600" loading="lazy" />
         <div>
           <span class="tag">Cultura</span>
           <h3>Ruta inca por el Valle Sagrado</h3>
@@ -91,7 +105,7 @@
       </article>
 
       <article class="exp-row">
-        <img class="exp-thumb" src="img/bariloche.svg" alt="Lago y montañas nevadas de Bariloche" width="800" height="600" loading="lazy" />
+        <img class="exp-thumb" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Lago_Nahuel_Huapi.jpg?width=1400" alt="Lago y montañas nevadas de Bariloche" width="800" height="600" loading="lazy" />
         <div>
           <span class="tag">Naturaleza</span>
           <h3>Circuito de siete lagos en Bariloche</h3>
@@ -121,6 +135,8 @@
         <h3>Wanderly</h3>
         <a href="nosotros.html">Nosotros</a>
         <a href="contacto.html">Contacto</a>
+        <a href="login.html">Ingresar</a>
+        <a href="carrito.html">Carrito</a>
       </nav>
 
       <address class="footer-col" id="footer-contact">
@@ -131,6 +147,17 @@
       </address>
     </div>
 
+<div class="image-credits">
+  <strong>Fotografías:</strong>
+  Atacama — Leandro Neumann Ciuffo (CC BY 2.0);
+  Torres del Paine — Gonzalobaeza (CC BY);
+  Chiloé — Cplandco (CC BY-SA 4.0);
+  Valle Sagrado — Emmanuel DYAN (CC BY 2.0);
+  Cartagena — Robert Schediwy (dominio público);
+  Bariloche — Matiasmehdi (dominio público).
+  Fuentes: <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons</a>.
+</div>
+
     <div class="footer-bottom">
       <div class="footer-bottom-inner">
         <p>&copy; <span id="footerYear">2026</span> Wanderly. Proyecto académico — DSY1104 Desarrollo Fullstack II.</p>
@@ -139,6 +166,9 @@
     </div>
   </footer>
 
+  <script src="js/catalogo.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/carrito.js"></script>
   <script src="js/main.js"></script>
   <script src="js/validaciones.js"></script>
 </body>
