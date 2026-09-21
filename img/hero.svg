@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ilustración de una postal de viaje con montañas, sol y un camino"><title>Ilustración de una postal de viaje con montañas, sol y un camino</title>
+<defs>
+ <linearGradient id="s" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#153b3f"/><stop offset=".35" stop-color="#b5482a"/><stop offset=".75" stop-color="#e2a446"/><stop offset="1" stop-color="#f2d58a"/>
+ </linearGradient>
+</defs>
+<rect width="640" height="800" fill="url(#s)"/>
+<circle cx="360" cy="380" r="120" fill="#faf6ec" opacity=".92"/>
+<g fill="#faf6ec" opacity=".8"><path d="M90 150 q14 -14 28 0 q14 -14 28 0" stroke="#faf6ec" stroke-width="3" fill="none"/><path d="M470 110 q10 -10 20 0 q10 -10 20 0" stroke="#faf6ec" stroke-width="3" fill="none"/></g>
+<polygon points="-90.0,640.0 36.5,497.0 112.4,472.4 140.0,380.0 181.4,452.6 255.0,510.0 370.0,640.0" fill="#2c5a5c"/><polygon points="75.6,452.8 84.8,482.5 117.0,446.2 158.4,479.2 190.6,449.5 204.4,452.8 140.0,380.0" fill="#e9f0ee"/>
+<polygon points="250.0,640.0 387.5,475.0 470.0,440.8 500.0,340.0 545.0,419.2 625.0,490.0 750.0,640.0" fill="#1d4a4d"/><polygon points="430.0,424.0 440.0,456.4 475.0,416.8 520.0,452.8 555.0,420.4 570.0,424.0 500.0,340.0" fill="#e9f0ee"/>
+<polygon points="120.0,660.0 235.5,555.5 304.8,537.2 330.0,470.0 367.8,522.8 435.0,565.0 540.0,660.0" fill="#153b3f"/>
+<path d="M0 640 H640 V800 H0Z" fill="#0e2729"/>
+<path d="M290 800 C 200 720, 470 700, 360 640 C 300 610, 340 580, 330 560" stroke="#faf6ec" stroke-width="6" stroke-dasharray="4 16" stroke-linecap="round" fill="none"/>
+<circle cx="330" cy="556" r="10" fill="#c9a227"/>
+<g transform="translate(520 720)" fill="none" stroke="#faf6ec" stroke-width="3"><circle r="34"/><circle r="4" fill="#faf6ec"/><polygon points="0,-30 6,0 0,30 -6,0" fill="#c9a227" stroke="none"/></g>
+</svg>
