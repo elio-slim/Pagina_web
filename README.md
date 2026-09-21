@@ -1,13 +1,11 @@
-<<<<<<< HEAD
-# proyecto-p-gina-web-
-=======
 # Wanderly
 
-Sitio web de una agencia de viajes ficticia, desarrollado como Evaluación
+Tienda online (e-commerce) de una agencia de viajes ficticia, desarrollado como Evaluación
 Parcial N°1 de **DSY1104 – Desarrollo Fullstack II** (Duoc UC).
 
 Construido solo con **HTML5, CSS3 y JavaScript Vanilla** (sin frameworks,
-sin backend), tal como exige la pauta de la evaluación.
+sin backend), tal como exige la pauta de la evaluación. Incluye buscador,
+carrito de compras e inicio de sesión (simulados en el navegador).
 
 ## Estructura del proyecto
 
@@ -20,18 +18,33 @@ wanderly/
 ├── paquetes.html             -> formulario de reserva
 ├── nosotros.html
 ├── contacto.html             -> formulario de contacto
+├── login.html                -> ingresar / crear cuenta (e-commerce)
+├── buscar.html               -> resultados del buscador (?q=)
+├── carrito.html              -> carrito y finalización de compra
 ├── css/
 │   └── styles.css            -> única hoja de estilos externa (todas las páginas)
 ├── js/
 │   ├── main.js               -> menú móvil, filtro de destinos, "volver arriba"
 │   ├── validaciones.js       -> motor de validación de formularios
-│   └── destino-detalle.js    -> datos y render de cada destino
-├── img/                      -> ilustraciones SVG locales (destinos, hero, mapa, equipo)
+│   ├── destino-detalle.js    -> datos y render de cada destino
+│   ├── catalogo.js           -> productos y precios de la tienda
+│   ├── auth.js               -> registro, login y sesión (localStorage)
+│   ├── carrito.js            -> carrito de compras y pedidos
+│   └── buscar.js             -> buscador y ordenamiento de resultados
+├── img/                      -> fotos JPG de destinos + SVG (hero, mapa, equipo, favicon)
 ├── TAREAS.md                 -> reparto de tareas del equipo
 ├── GIT-WORKFLOW.md           -> flujo de trabajo colaborativo con Git
 ├── PRESENTACION.md           -> guion para la presentación individual
 └── README.md
 ```
+
+## Funciones de e-commerce
+
+- **Buscador** en la cabecera de todas las páginas (`buscar.html?q=...`), sin distinguir tildes ni mayúsculas, con orden por precio.
+- **Carrito**: botón «Agregar al carrito» en destinos, ficha de destino, paquetes y resultados; cantidad de personas editable (1 a 12); total y contador en la cabecera.
+- **Cuenta**: registro e inicio de sesión con validaciones (contraseña de 8+ caracteres con letras y números). Para finalizar la compra se exige sesión.
+- **Compra**: genera un número de pedido y lo guarda en `localStorage`. El pago es **simulado**: no se piden datos de tarjeta.
+- **Limitación**: al no haber backend, cuentas, carrito y pedidos viven solo en el navegador (`localStorage`); no es un sistema de seguridad real.
 
 ## Cómo abrir el proyecto
 
@@ -55,11 +68,31 @@ VS Code o `python -m http.server 5500`), también funciona igual.
 | IE1.2.1 Validaciones con JavaScript, sugerencias y mensajes personalizados | `js/validaciones.js` (mensaje específico por campo, pistas, sugerencia de correo, contador de caracteres, `aria-invalid`) |
 | IE1.3.1 Cambios coherentes en repositorio colaborativo | `GIT-WORKFLOW.md` y `TAREAS.md`; el historial real debe generarlo el equipo (ver esos archivos) |
 
-## Cambiar las imágenes por fotos reales (opcional)
+## Fotos de los destinos
 
-Las imágenes de `img/` son ilustraciones SVG. Si quieres fotos reales, guárdalas
-con el mismo nombre base y cambia la extensión en los `src` (o conserva el
-nombre y el formato). Recuerda mantener el atributo `alt` descriptivo.
+Las 6 fotos de destinos están en `img/` como JPG: `atacama.jpg`,
+`valle-sagrado.jpg`, `chiloe.jpg`, `bariloche.jpg`, `cartagena.jpg` y
+`torres-del-paine.jpg`. Se pueden reemplazar por fotos reales **sin tocar el
+código**, siempre que conserven el mismo nombre y la extensión `.jpg`:
+
+- Formato JPG, proporción 4:3 (recomendado 1200 × 900 px) y menos de 300 KB
+  (se pueden comprimir en https://squoosh.app).
+- Usar solo fotos propias o con licencia libre (Unsplash, Pexels, Wikimedia
+  Commons) y anotar el crédito en la tabla de abajo.
+- Si la foto nueva muestra otra escena, actualizar el texto `alt` en
+  `index.html`, `destinos.html`, `destino-detalle.html`,
+  `js/destino-detalle.js` y `js/catalogo.js`.
+
+### Créditos de imágenes
+
+| Archivo | Autor | Fuente / licencia |
+|---------|-------|-------------------|
+| atacama.jpg | (completar) | (completar) |
+| valle-sagrado.jpg | (completar) | (completar) |
+| chiloe.jpg | (completar) | (completar) |
+| bariloche.jpg | (completar) | (completar) |
+| cartagena.jpg | (completar) | (completar) |
+| torres-del-paine.jpg | (completar) | (completar) |
 
 ## Videos por destino
 
@@ -75,4 +108,8 @@ Ver reparto de responsabilidades en [`TAREAS.md`](./TAREAS.md).
 
 El documento ERS (Especificación de Requisitos del Software, versión 1)
 se entrega por separado junto con el enlace de GitHub y este proyecto comprimido.
->>>>>>> 9c52cb9 (chore: estructura inicial del proyecto Wanderly)
+
+
+## Fotografías reales
+
+Las imágenes de destinos fueron reemplazadas por fotografías de Wikimedia Commons mediante URLs directas. Se mantienen los créditos y licencias correspondientes en el pie de página. El sitio necesita conexión a Internet para cargar estas fotografías.
