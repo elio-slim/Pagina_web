@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ilustración de las tres torres de granito sobre un lago turquesa en Torres del Paine"><title>Ilustración de las tres torres de granito sobre un lago turquesa en Torres del Paine</title>
+<defs>
+ <linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fb6d9"/><stop offset="1" stop-color="#e9f1f4"/></linearGradient>
+ <linearGradient id="l" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#43bab4"/><stop offset="1" stop-color="#1f7f86"/></linearGradient>
+</defs>
+<rect width="800" height="600" fill="url(#s)"/>
+<g fill="#fff" opacity=".85"><ellipse cx="140" cy="100" rx="120" ry="24"/><ellipse cx="240" cy="122" rx="80" ry="18"/><ellipse cx="640" cy="80" rx="130" ry="26"/></g>
+<polygon points="0,430 0,300 120,250 220,290 360,250 470,280 600,230 720,280 800,260 800,430" fill="#8fa3b4"/>
+<polygon points="60,430 200,310 300,340 430,300 560,340 700,300 780,430" fill="#8a8078"/>
+<polygon points="267.0,430.0 267.0,190.0 275.3,160.0 288.0,150.0 300.1,164.0 313.0,196.0 313.0,430.0" fill="#a39a90"/><polygon points="290.0,430.0 290.0,154.0 300.1,164.0 313.0,196.0 313.0,430.0" fill="#5f564f"/><line x1="280.8" y1="210" x2="280.8" y2="300" stroke="#fff" stroke-width="4" opacity=".8" stroke-linecap="round"/><polygon points="372.0,430.0 372.0,140.0 382.1,110.0 398.0,100.0 412.3,114.0 428.0,146.0 428.0,430.0" fill="#a39a90"/><polygon points="400.0,430.0 400.0,104.0 412.3,114.0 428.0,146.0 428.0,430.0" fill="#5f564f"/><line x1="388.8" y1="160" x2="388.8" y2="250" stroke="#fff" stroke-width="4" opacity=".8" stroke-linecap="round"/><polygon points="493.0,430.0 493.0,205.0 500.9,175.0 513.0,165.0 524.7,179.0 537.0,211.0 537.0,430.0" fill="#a39a90"/><polygon points="515.0,430.0 515.0,169.0 524.7,179.0 537.0,211.0 537.0,430.0" fill="#5f564f"/><line x1="506.2" y1="225" x2="506.2" y2="315" stroke="#fff" stroke-width="4" opacity=".8" stroke-linecap="round"/>
+<rect y="430" width="800" height="170" fill="url(#l)"/>
+<g stroke="#e9f7f5" stroke-width="2.5" stroke-linecap="round" opacity=".35"><line x1="120" y1="470" x2="240" y2="470"/><line x1="380" y1="500" x2="520" y2="500"/><line x1="560" y1="460" x2="680" y2="460"/></g>
+<path d="M0 548 Q160 500 340 540 T800 520 V600 H0Z" fill="#c98f2a"/>
+<path d="M0 578 Q220 540 440 574 T800 560 V600 H0Z" fill="#8a6a1e"/>
+<g fill="#4d6b3a"><ellipse cx="90" cy="560" rx="60" ry="22"/><ellipse cx="700" cy="556" rx="70" ry="24"/><ellipse cx="420" cy="586" rx="80" ry="18"/></g>
+</svg>
