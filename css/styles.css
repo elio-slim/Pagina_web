@@ -735,3 +735,158 @@ address.footer-col { font-style: normal; }
 section.container { padding-top: 56px; padding-bottom: 56px; }
 
 .kicker { color: var(--arcilla); font-weight: 600; font-size: 0.9rem; }
+
+/* ==========================================================================
+   ESTILOS RESPONSIVOS - WANDERLY
+   ========================================================================== */
+
+/* 1. Reset e imágenes responsivas
+   -------------------------------------------------------------------------- */
+img, svg, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Contenedores adaptables */
+.container, main, section {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
+/* 2. Dispositivos Móviles (Móvil por defecto hasta 768px)
+   -------------------------------------------------------------------------- */
+
+/* Navegación y Header Móvil */
+.site-nav {
+  display: none; /* Se oculta por defecto en pantallas pequeñas */
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--bg-nav, #ffffff);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* Mostrar menú al hacer clic en el botón hamburguesa */
+.site-nav.open {
+  display: flex;
+}
+
+.nav-toggle {
+  display: block; /* Botón hamburguesa visible en móvil */
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Grillas a una sola columna en móviles */
+.grid, 
+.destinos-grid, 
+.experiencias-grid, 
+.paquetes-grid, 
+.equipo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Contenedores de videos (YouTube / iframe) responsivos */
+.video-container, .iframe-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe, 
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Formularios en pantallas pequeñas */
+form .form-group, 
+.form-row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input, select, textarea, button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* 3. Tablets y Pantallas Medianas (768px en adelante)
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  
+  /* Ocultar botón hamburguesa y mostrar menú horizontal */
+  .nav-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    box-shadow: none;
+    padding: 0;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  /* Grillas a 2 columnas */
+  .destinos-grid, 
+  .experiencias-grid, 
+  .paquetes-grid, 
+  .equipo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Distribución de formularios a 2 filas horizontales */
+  .form-row {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+
+/* 4. Pantallas Grandes y Desktop (1024px en adelante)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1024px) {
+
+  /* Grillas a 3 columnas para PC */
+  .destinos-grid, 
+  .experiencias-grid, 
+  .paquetes-grid, 
+  .equipo-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  /* Sección Hero en vista de escritorio */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+  }
+}
