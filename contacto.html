@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — Wanderly</title>
+  <meta name="description" content="Escríbele al equipo de Wanderly: cotizaciones, soporte y alianzas." />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">Wanderly<span class="brand-dot">.</span></a>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="siteNav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="destinos.html">Destinos</a>
+      <a href="experiencias.html">Experiencias</a>
+      <a href="paquetes.html">Paquetes</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html" class="nav-cta" aria-current="page">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero hero-compact" aria-labelledby="titulo-pagina">
+      <div class="container">
+        <p class="hero-eyebrow">Contacto</p>
+        <h1 id="titulo-pagina">Escríbenos, respondemos nosotros mismos</h1>
+        <p class="lead">Sin call center. El mensaje llega directo al equipo que arma los itinerarios.</p>
+      </div>
+    </section>
+
+    <section class="container" aria-label="Formulario y datos de contacto">
+      <div class="split">
+        <div class="form-card">
+          <form data-validar-form novalidate>
+            <div class="field">
+              <label for="c-nombre">Nombre completo</label>
+              <input type="text" id="c-nombre" name="nombre" autocomplete="name" data-validar="nombre" required />
+              <span class="hint">Nombre y apellido, por ejemplo: Ana Pérez.</span>
+              <span class="error-msg"></span>
+            </div>
+            <div class="field">
+              <label for="c-email">Correo electrónico</label>
+              <input type="email" id="c-email" name="email" autocomplete="email" data-validar="email" required />
+              <span class="hint">Aquí te responderemos.</span>
+              <span class="error-msg"></span>
+            </div>
+
+            <div class="field">
+              <label for="c-asunto">Asunto</label>
+              <select id="c-asunto" name="asunto" data-validar="seleccion" required>
+                <option value="">Selecciona un asunto</option>
+                <option value="cotizacion">Cotización de viaje</option>
+                <option value="soporte">Soporte a una reserva existente</option>
+                <option value="alianzas">Alianzas y prensa</option>
+                <option value="otro">Otro</option>
+              </select>
+              <span class="hint">Nos ayuda a derivar tu mensaje a la persona correcta.</span>
+              <span class="error-msg"></span>
+            </div>
+
+            <div class="field">
+              <label for="c-mensaje">Mensaje</label>
+              <textarea id="c-mensaje" name="mensaje" maxlength="500" data-validar="mensaje" required></textarea>
+              <span class="hint">Mínimo 10 y máximo 500 caracteres.</span>
+              <span class="char-count" aria-hidden="true"></span>
+              <span class="error-msg"></span>
+            </div>
+
+            <div class="field field-check">
+              <div class="check-row">
+                <input type="checkbox" id="c-acepto" name="acepto" data-validar="acepto" required />
+                <label for="c-acepto">Acepto que Wanderly use estos datos para responder mi solicitud.</label>
+              </div>
+              <span class="error-msg"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+            <p class="form-status" role="status"></p>
+          </form>
+        </div>
+
+        <div>
+          <h2 class="h3">Otras formas de encontrarnos</h2>
+          <p>Si prefieres, también puedes escribirnos directo o pasar por nuestra oficina.</p>
+          <p class="contact-list">
+            <strong>Correo:</strong> <a href="mailto:hola@wanderly.cl">hola@wanderly.cl</a><br />
+            <strong>Teléfono:</strong> <a href="tel:+56900000000">+56 9 0000 0000</a>
+          </p>
+          <iframe class="map-frame" title="Mapa de Santiago, Chile" loading="lazy"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-70.69%2C-33.46%2C-70.63%2C-33.42&amp;layer=mapnik&amp;marker=-33.4372%2C-70.6506"></iframe>
+          <p class="video-fallback"><a href="https://www.openstreetmap.org/?mlat=-33.4372&amp;mlon=-70.6506#map=14/-33.4372/-70.6506" target="_blank" rel="noopener">Ver mapa más grande</a> — Santiago, Chile.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="brand footer-logo">Wanderly<span class="brand-dot">.</span></p>
+        <p class="footer-tagline">Viajes diseñados alrededor de tu curiosidad, no de un catálogo.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Explora">
+        <h3>Explora</h3>
+        <a href="destinos.html">Destinos</a>
+        <a href="experiencias.html">Experiencias</a>
+        <a href="paquetes.html">Paquetes</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Wanderly">
+        <h3>Wanderly</h3>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+      <address class="footer-col" id="footer-contact">
+        <h3>Contáctanos</h3>
+        <a href="mailto:hola@wanderly.cl">hola@wanderly.cl</a>
+        <a href="tel:+56900000000">+56 9 0000 0000</a>
+        <span class="footer-address">Santiago, Chile</span>
+      </address>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <p>&copy; <span id="footerYear">2026</span> Wanderly. Proyecto académico — DSY1104 Desarrollo Fullstack II.</p>
+        <button type="button" class="btn-top" id="btnTop">Volver arriba</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/validaciones.js"></script>
+</body>
+</html>

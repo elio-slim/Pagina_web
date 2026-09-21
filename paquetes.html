@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paquetes — Wanderly</title>
+  <meta name="description" content="Paquetes de viaje Wanderly: Explorador, Trotamundos y A tu manera. Reserva en línea." />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">Wanderly<span class="brand-dot">.</span></a>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="siteNav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="destinos.html">Destinos</a>
+      <a href="experiencias.html">Experiencias</a>
+      <a href="paquetes.html" aria-current="page">Paquetes</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html" class="nav-cta">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero hero-compact" aria-labelledby="titulo-pagina">
+      <div class="container">
+        <p class="hero-eyebrow">Paquetes</p>
+        <h1 id="titulo-pagina">Tres formas de viajar con nosotros</h1>
+        <p class="lead">Cada paquete es un punto de partida editable, no un cierre de trato.</p>
+      </div>
+    </section>
+
+    <section class="container" aria-label="Paquetes disponibles">
+      <div class="pkg-grid">
+        <article class="pkg-card">
+          <h2 class="h3">Explorador</h2>
+          <p class="price">$450.000 <small>por persona</small></p>
+          <p>Ideal para una primera escapada corta, con lo esencial bien resuelto.</p>
+          <ul>
+            <li>4 días / 3 noches</li>
+            <li>1 destino</li>
+            <li>Alojamiento estándar</li>
+            <li>Traslados incluidos</li>
+          </ul>
+          <a href="#reserva" class="btn btn-dark">Reservar</a>
+        </article>
+
+        <article class="pkg-card featured">
+          <h2 class="h3">Trotamundos</h2>
+          <p class="price">$780.000 <small>por persona</small></p>
+          <p>El más elegido: dos destinos conectados y una experiencia guiada incluida.</p>
+          <ul>
+            <li>7 días / 6 noches</li>
+            <li>2 destinos combinados</li>
+            <li>Alojamiento boutique</li>
+            <li>1 experiencia guiada incluida</li>
+            <li>Traslados y desayunos</li>
+          </ul>
+          <a href="#reserva" class="btn btn-primary">Reservar</a>
+        </article>
+
+        <article class="pkg-card">
+          <h2 class="h3">A tu manera</h2>
+          <p class="price">Desde $300.000 <small>por persona</small></p>
+          <p>Armamos el itinerario contigo desde cero, destino por destino.</p>
+          <ul>
+            <li>Duración a definir</li>
+            <li>Destinos a elección</li>
+            <li>Asesoría 1 a 1</li>
+            <li>Cotización personalizada</li>
+          </ul>
+          <a href="contacto.html" class="btn btn-dark">Hablar con Wanderly</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" id="reserva" aria-labelledby="reserva-titulo">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Reserva</p>
+          <h2 id="reserva-titulo">Cuéntanos tu viaje ideal</h2>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <form data-validar-form novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="r-nombre">Nombre completo</label>
+              <input type="text" id="r-nombre" name="nombre" autocomplete="name" data-validar="nombre" required />
+              <span class="hint">Nombre y apellido, por ejemplo: Ana Pérez.</span>
+              <span class="error-msg"></span>
+            </div>
+            <div class="field">
+              <label for="r-email">Correo electrónico</label>
+              <input type="email" id="r-email" name="email" autocomplete="email" data-validar="email" required />
+              <span class="hint">Te enviaremos la propuesta a este correo.</span>
+              <span class="error-msg"></span>
+            </div>
+            <div class="field">
+              <label for="r-telefono">Teléfono</label>
+              <input type="tel" id="r-telefono" name="telefono" autocomplete="tel" placeholder="+56 9 1234 5678" data-validar="telefono" required />
+              <span class="hint">Con código de país si es posible: +56 9 1234 5678.</span>
+              <span class="error-msg"></span>
+            </div>
+
+            <div class="field">
+              <label for="r-destino">Destino de interés</label>
+              <select id="r-destino" name="destino" data-validar="seleccion" required>
+                <option value="">Selecciona un destino</option>
+                <option value="atacama">San Pedro de Atacama</option>
+                <option value="valle-sagrado">Valle Sagrado</option>
+                <option value="chiloe">Chiloé</option>
+                <option value="bariloche">Bariloche</option>
+                <option value="cartagena">Cartagena</option>
+                <option value="torres-del-paine">Torres del Paine</option>
+              </select>
+              <span class="hint">Si aún no decides, elige el que más te llame la atención.</span>
+              <span class="error-msg"></span>
+            </div>
+
+            <div class="field">
+              <label for="r-fecha">Fecha estimada de viaje</label>
+              <input type="date" id="r-fecha" name="fecha" data-validar="fecha" required />
+              <span class="hint">Desde hoy y hasta dentro de 2 años.</span>
+              <span class="error-msg"></span>
+            </div>
+
+            <div class="field">
+              <label for="r-personas">Número de personas</label>
+              <input type="number" id="r-personas" name="personas" min="1" max="12" inputmode="numeric" data-validar="personas" required />
+              <span class="hint">Entre 1 y 12 personas.</span>
+              <span class="error-msg"></span>
+            </div>
+
+            <div class="field full">
+              <label for="r-comentario">Cuéntanos algo más (opcional)</label>
+              <textarea id="r-comentario" name="comentario" maxlength="500" placeholder="Ej: viajamos con niños, buscamos algo tranquilo, tenemos una fecha fija..."></textarea>
+            </div>
+
+            <div class="field field-check full">
+              <div class="check-row">
+                <input type="checkbox" id="r-acepto" name="acepto" data-validar="acepto" required />
+                <label for="r-acepto">Acepto que Wanderly use estos datos para responder mi solicitud.</label>
+              </div>
+              <span class="error-msg"></span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Enviar solicitud de reserva</button>
+          <p class="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="brand footer-logo">Wanderly<span class="brand-dot">.</span></p>
+        <p class="footer-tagline">Viajes diseñados alrededor de tu curiosidad, no de un catálogo.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Explora">
+        <h3>Explora</h3>
+        <a href="destinos.html">Destinos</a>
+        <a href="experiencias.html">Experiencias</a>
+        <a href="paquetes.html">Paquetes</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Wanderly">
+        <h3>Wanderly</h3>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+      <address class="footer-col" id="footer-contact">
+        <h3>Contáctanos</h3>
+        <a href="mailto:hola@wanderly.cl">hola@wanderly.cl</a>
+        <a href="tel:+56900000000">+56 9 0000 0000</a>
+        <span class="footer-address">Santiago, Chile</span>
+      </address>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <p>&copy; <span id="footerYear">2026</span> Wanderly. Proyecto académico — DSY1104 Desarrollo Fullstack II.</p>
+        <button type="button" class="btn-top" id="btnTop">Volver arriba</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/validaciones.js"></script>
+</body>
+</html>
