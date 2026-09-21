@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiencias — Wanderly</title>
+  <meta name="description" content="Experiencias de Wanderly que puedes sumar a cualquier paquete de viaje." />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">Wanderly<span class="brand-dot">.</span></a>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="siteNav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="destinos.html">Destinos</a>
+      <a href="experiencias.html" aria-current="page">Experiencias</a>
+      <a href="paquetes.html">Paquetes</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html" class="nav-cta">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero hero-compact" aria-labelledby="titulo-pagina">
+      <div class="container">
+        <p class="hero-eyebrow">Experiencias</p>
+        <h1 id="titulo-pagina">Actividades que arman el itinerario</h1>
+        <p class="lead">Cada experiencia se puede sumar a cualquier paquete. Aquí las más pedidas.</p>
+      </div>
+    </section>
+
+    <section class="container" aria-label="Listado de experiencias">
+      <article class="exp-row">
+        <img class="exp-thumb" src="img/atacama.svg" alt="Cielo estrellado sobre el desierto de Atacama" width="800" height="600" loading="lazy" />
+        <div>
+          <span class="tag">Astronomía</span>
+          <h3>Observación de estrellas en Atacama</h3>
+          <p>Noche guiada con telescopio profesional en el desierto más árido del mundo.</p>
+        </div>
+        <a href="destino-detalle.html?destino=atacama" class="btn btn-dark">Ver destino</a>
+      </article>
+
+      <article class="exp-row">
+        <img class="exp-thumb" src="img/torres-del-paine.svg" alt="Torres de granito de Torres del Paine" width="800" height="600" loading="lazy" />
+        <div>
+          <span class="tag">Trekking</span>
+          <h3>Circuito W corto en Torres del Paine</h3>
+          <p>Los miradores más icónicos del parque en formato de 3 días, sin acampar.</p>
+        </div>
+        <a href="destino-detalle.html?destino=torres-del-paine" class="btn btn-dark">Ver destino</a>
+      </article>
+
+      <article class="exp-row">
+        <img class="exp-thumb" src="img/chiloe.svg" alt="Palafitos de colores en Chiloé" width="800" height="600" loading="lazy" />
+        <div>
+          <span class="tag">Gastronomía</span>
+          <h3>Curanto al hoyo en Chiloé</h3>
+          <p>Preparación tradicional en tierra junto a una familia local, con historia incluida.</p>
+        </div>
+        <a href="destino-detalle.html?destino=chiloe" class="btn btn-dark">Ver destino</a>
+      </article>
+
+      <article class="exp-row">
+        <img class="exp-thumb" src="img/cartagena.svg" alt="Casas coloniales de Cartagena al atardecer" width="800" height="600" loading="lazy" />
+        <div>
+          <span class="tag">Historia</span>
+          <h3>City tour amurallado en Cartagena</h3>
+          <p>Recorrido a pie por el centro histórico, con parada en el Café del Mar al atardecer.</p>
+        </div>
+        <a href="destino-detalle.html?destino=cartagena" class="btn btn-dark">Ver destino</a>
+      </article>
+
+      <article class="exp-row">
+        <img class="exp-thumb" src="img/valle-sagrado.svg" alt="Terrazas circulares de Moray en el Valle Sagrado" width="800" height="600" loading="lazy" />
+        <div>
+          <span class="tag">Cultura</span>
+          <h3>Ruta inca por el Valle Sagrado</h3>
+          <p>Terrazas de Moray, salineras de Maras y cierre en Machu Picchu.</p>
+        </div>
+        <a href="destino-detalle.html?destino=valle-sagrado" class="btn btn-dark">Ver destino</a>
+      </article>
+
+      <article class="exp-row">
+        <img class="exp-thumb" src="img/bariloche.svg" alt="Lago y montañas nevadas de Bariloche" width="800" height="600" loading="lazy" />
+        <div>
+          <span class="tag">Naturaleza</span>
+          <h3>Circuito de siete lagos en Bariloche</h3>
+          <p>Miradores, chocolatería artesanal y una parada de trekking en Cerro Campanario.</p>
+        </div>
+        <a href="destino-detalle.html?destino=bariloche" class="btn btn-dark">Ver destino</a>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="brand footer-logo">Wanderly<span class="brand-dot">.</span></p>
+        <p class="footer-tagline">Viajes diseñados alrededor de tu curiosidad, no de un catálogo.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Explora">
+        <h3>Explora</h3>
+        <a href="destinos.html">Destinos</a>
+        <a href="experiencias.html">Experiencias</a>
+        <a href="paquetes.html">Paquetes</a>
+      </nav>
+
+      <nav class="footer-col" aria-label="Wanderly">
+        <h3>Wanderly</h3>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+      <address class="footer-col" id="footer-contact">
+        <h3>Contáctanos</h3>
+        <a href="mailto:hola@wanderly.cl">hola@wanderly.cl</a>
+        <a href="tel:+56900000000">+56 9 0000 0000</a>
+        <span class="footer-address">Santiago, Chile</span>
+      </address>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <p>&copy; <span id="footerYear">2026</span> Wanderly. Proyecto académico — DSY1104 Desarrollo Fullstack II.</p>
+        <button type="button" class="btn-top" id="btnTop">Volver arriba</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/validaciones.js"></script>
+</body>
+</html>
