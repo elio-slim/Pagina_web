@@ -1,8 +1,9 @@
 /**
  * validaciones.js
  * Motor de validación de formularios en JavaScript puro (sin librerías).
- * Se aplica a todo <form data-validar-form> (reserva en paquetes.html y
- * contacto en contacto.html).
+ * Se aplica a todo <form data-validar-form> (reserva en paquetes.html,
+ * contacto en contacto.html y login/registro en login.html; estos últimos
+ * llevan data-manual y su envío lo resuelve auth.js).
  *
  * - Valida al salir del campo (blur) y en tiempo real una vez que hay error.
  * - Cada campo tiene su regla y un mensaje de error específico, mostrado
@@ -40,6 +41,8 @@ const MENSAJES = {
   seleccion: "Selecciona una opción de la lista.",
   mensajeCorto: "Cuéntanos en al menos 10 caracteres qué necesitas.",
   acepto: "Debes aceptar el uso de tus datos para poder enviar el formulario.",
+  password: "Usa al menos 8 caracteres, con letras y números.",
+  confirmar: "Las contraseñas no coinciden.",
 };
 
 /** Fecha local en formato AAAA-MM-DD (evita el desfase de toISOString/UTC). */
@@ -83,6 +86,12 @@ function obtenerError(campo) {
     }
     case "mensaje":
       return valor.length < 10 ? MENSAJES.mensajeCorto : "";
+    case "password":
+      return campo.value.length >= 8 && /[A-Za-z]/.test(campo.value) && /\d/.test(campo.value) ? "" : MENSAJES.password;
+    case "confirmar": {
+      const original = campo.form.querySelector('[data-validar="password"]');
+      return original && original.value === campo.value ? "" : MENSAJES.confirmar;
+    }
     default:
       return "";
   }
@@ -161,6 +170,10 @@ function inicializarFormulario(form) {
     campo.addEventListener(evento, () => validarCampo(campo));
     campo.addEventListener("input", () => {
       const contenedor = campo.closest(".field");
+      if (campo.dataset.validar === "password") {
+        const conf = form.querySelector('[data-validar="confirmar"]');
+        if (conf && conf.value !== "") validarCampo(conf);
+      }
       if (contenedor.classList.contains("invalid") || campo.dataset.validar === "email") {
         validarCampo(campo);
       }
@@ -183,6 +196,15 @@ function inicializarFormulario(form) {
         ".field.invalid input, .field.invalid select, .field.invalid textarea"
       );
       if (primerError) primerError.focus();
+      return;
+    }
+
+    // Formularios con lógica propia (login/registro): avisamos que ya son válidos
+    // y auth.js se encarga del resto.
+    if (form.hasAttribute("data-manual")) {
+      statusBox.className = "form-status";
+      statusBox.textContent = "";
+      form.dispatchEvent(new CustomEvent("wanderly:valido"));
       return;
     }
 
