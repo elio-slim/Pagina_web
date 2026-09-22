@@ -13,8 +13,8 @@ const DESTINOS = {
   atacama: {
     nombre: "San Pedro de Atacama",
     pais: "Chile",
-    imagen: "img/atacama.svg",
-    alt: "Cielo estrellado sobre dunas y el volcán Licancabur, ilustración de San Pedro de Atacama",
+    imagen: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Atacama_Desert_(13340986003).jpg?width=1400",
+    alt: "Cielo estrellado sobre dunas y el volcán Licancabur, San Pedro de Atacama",
     resumen:
       "El desierto más árido del mundo, con salares, géiseres y cielos que se usan para observación astronómica profesional.",
     dias: "4 días / 3 noches",
@@ -25,8 +25,8 @@ const DESTINOS = {
   "valle-sagrado": {
     nombre: "Valle Sagrado",
     pais: "Perú",
-    imagen: "img/valle-sagrado.svg",
-    alt: "Terrazas circulares de Moray con montañas nevadas al fondo, ilustración del Valle Sagrado",
+    imagen: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sacred_Valley_(around_Pisaq),_Peru.jpg?width=1400",
+    alt: "Terrazas circulares de Moray con montañas nevadas al fondo, Valle Sagrado",
     resumen:
       "Un recorrido por Cusco, las terrazas de Moray y las salineras de Maras, cerrando con Machu Picchu en tren.",
     dias: "5 días / 4 noches",
@@ -37,8 +37,8 @@ const DESTINOS = {
   chiloe: {
     nombre: "Chiloé",
     pais: "Chile",
-    imagen: "img/chiloe.svg",
-    alt: "Palafitos de colores sobre el mar, ilustración de Chiloé",
+    imagen: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Palafitos_Chiloe.jpg?width=1400",
+    alt: "Palafitos de colores sobre el mar, Chiloé",
     resumen:
       "Palafitos, iglesias patrimonio de la UNESCO y curanto preparado al hoyo en comunidades locales.",
     dias: "3 días / 2 noches",
@@ -49,8 +49,8 @@ const DESTINOS = {
   bariloche: {
     nombre: "Bariloche",
     pais: "Argentina",
-    imagen: "img/bariloche.svg",
-    alt: "Lago con montañas nevadas y pinos, ilustración de Bariloche",
+    imagen: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lago_Nahuel_Huapi.jpg?width=1400",
+    alt: "Lago con montañas nevadas y pinos, Bariloche",
     resumen:
       "Circuito de siete lagos, chocolatería artesanal y trekking de dificultad media en plena Patagonia andina.",
     dias: "4 días / 3 noches",
@@ -61,8 +61,8 @@ const DESTINOS = {
   cartagena: {
     nombre: "Cartagena",
     pais: "Colombia",
-    imagen: "img/cartagena.svg",
-    alt: "Casas coloniales de colores frente al mar al atardecer, ilustración de Cartagena",
+    imagen: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Cartagena_Old_City.JPG?width=1400",
+    alt: "Casas coloniales de colores frente al mar al atardecer, Cartagena",
     resumen:
       "Ciudad amurallada, atardeceres desde el Café del Mar y playas cercanas en las Islas del Rosario.",
     dias: "4 días / 3 noches",
@@ -73,8 +73,8 @@ const DESTINOS = {
   "torres-del-paine": {
     nombre: "Torres del Paine",
     pais: "Chile",
-    imagen: "img/torres-del-paine.svg",
-    alt: "Tres torres de granito sobre un lago turquesa, ilustración de Torres del Paine",
+    imagen: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Torres-del-paine.jpg?width=1400",
+    alt: "Tres torres de granito sobre un lago turquesa, Torres del Paine",
     resumen:
       "Versión corta del circuito W: los miradores más icónicos del parque sin necesidad de acampar varios días.",
     dias: "5 días / 4 noches",
@@ -148,6 +148,12 @@ function pintarDestino(clave, destino) {
     li.textContent = item;
     lista.appendChild(li);
   });
+
+  const producto = buscarProducto(clave);
+  if (producto) {
+    document.getElementById("destino-precio").textContent = formatoPrecio(producto.precio);
+    document.getElementById("btn-agregar").dataset.agregar = producto.id;
+  }
 
   document.getElementById("link-reserva").href = `paquetes.html?destino=${encodeURIComponent(clave)}#reserva`;
 
