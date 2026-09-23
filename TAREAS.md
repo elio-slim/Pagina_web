@@ -42,8 +42,3 @@ Cubre IE1.2.1/IE1.2.2 y IE1.3.1/IE1.3.2.
   no solo su parte)
 - Completar juntos el documento ERS (versión 1)
 
-
-- [ ] El repositorio es público en GitHub
-- [ ] El proyecto frontend está comprimido en `.zip` para la entrega
-- [ ] Cada integrante puede explicar el sitio completo (ver `PRESENTACION.md`)
-- [ ] Nombres reales de los integrantes en `nosotros.html` y en el ERS
