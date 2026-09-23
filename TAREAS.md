@@ -5,7 +5,7 @@ la rúbrica de la Evaluación Parcial N°1 (IE1.1.x, IE1.2.x, IE1.3.x).
 Renombra "Integrante 1/2/3" por los nombres reales del equipo antes de
 subir el proyecto.
 
-## Elio 1 — Estructura y contenido (HTML)
+## Victor 1 — Estructura y contenido (HTML)
 Cubre IE1.1.1 y su explicación en la presentación (IE1.1.3).
 
 - `index.html`, `destinos.html`, `nosotros.html`
@@ -16,7 +16,7 @@ Cubre IE1.1.1 y su explicación en la presentación (IE1.1.3).
 - Verificar que todos los enlaces internos funcionen y las páginas
   estén bien interconectadas
 
-## Victor 2 — Estilos y diseño (CSS)
+## ELio 2 — Estilos y diseño (CSS)
 Cubre IE1.1.2 y su explicación en la presentación (IE1.1.4).
 
 - `css/styles.css` completo
