@@ -11,7 +11,7 @@ Proyecto Wanderly — sitio web de una agencia de viajes
 | Fecha | Septiembre de 2026 |
 | Equipo | Victor Gomez, Elio Millan, Ramses Escalona |
 | Docente | Giovanni Valdivia |
-| Repositorio | https://github.com/elio-slim/Pagina\_web |
+| Repositorio | https://github.com/elio-slim/Pagina_web |
 
 # **1\. Introducción**
 
