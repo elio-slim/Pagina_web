@@ -59,15 +59,6 @@ VS Code o `python -m http.server 5500`), también funciona igual.
 > (Google Fonts) requieren conexión a internet. Sin conexión, el sitio sigue
 > siendo legible gracias a las fuentes de respaldo.
 
-## Cómo cumple la pauta de la evaluación
-
-| Indicador | Dónde se evidencia |
-|-----------|--------------------|
-| IE1.1.1 HTML semántico, hipervínculos, imágenes, botones, videos, navegación, formularios y footer | `header`, `nav`, `main`, `section`, `article`, `figure`, `footer` en las 7 páginas; `<img>` con `alt`; botones `<button>`; video embebido en `index.html` y `destino-detalle.html`; formularios en `paquetes.html` y `contacto.html` |
-| IE1.1.2 CSS personalizado y externo | Todas las páginas enlazan `css/styles.css`; no hay estilos en línea ni bloques `<style>` |
-| IE1.2.1 Validaciones con JavaScript, sugerencias y mensajes personalizados | `js/validaciones.js` (mensaje específico por campo, pistas, sugerencia de correo, contador de caracteres, `aria-invalid`) |
-| IE1.3.1 Cambios coherentes en repositorio colaborativo | `GIT-WORKFLOW.md` y `TAREAS.md`; el historial real debe generarlo el equipo (ver esos archivos) |
-
 ## Fotos de los destinos
 
 Las 6 fotos de destinos están en `img/` como JPG: `atacama.jpg`,
@@ -77,39 +68,4 @@ código**, siempre que conserven el mismo nombre y la extensión `.jpg`:
 
 - Formato JPG, proporción 4:3 (recomendado 1200 × 900 px) y menos de 300 KB
   (se pueden comprimir en https://squoosh.app).
-- Usar solo fotos propias o con licencia libre (Unsplash, Pexels, Wikimedia
-  Commons) y anotar el crédito en la tabla de abajo.
-- Si la foto nueva muestra otra escena, actualizar el texto `alt` en
-  `index.html`, `destinos.html`, `destino-detalle.html`,
-  `js/destino-detalle.js` y `js/catalogo.js`.
 
-### Créditos de imágenes
-
-| Archivo | Autor | Fuente / licencia |
-|---------|-------|-------------------|
-| atacama.jpg | (completar) | (completar) |
-| valle-sagrado.jpg | (completar) | (completar) |
-| chiloe.jpg | (completar) | (completar) |
-| bariloche.jpg | (completar) | (completar) |
-| cartagena.jpg | (completar) | (completar) |
-| torres-del-paine.jpg | (completar) | (completar) |
-
-## Videos por destino
-
-Solo San Pedro de Atacama tiene un video configurado. Para agregar los demás,
-abre `js/destino-detalle.js` y reemplaza `videoId: null` por el ID del video de
-YouTube (lo que va después de `v=` en la URL).
-
-## Equipo
-
-Ver reparto de responsabilidades en [`TAREAS.md`](./TAREAS.md).
-
-## Documento ERS
-
-El documento ERS (Especificación de Requisitos del Software, versión 1)
-se entrega por separado junto con el enlace de GitHub y este proyecto comprimido.
-
-
-## Fotografías reales
-
-Las imágenes de destinos fueron reemplazadas por fotografías de Wikimedia Commons mediante URLs directas. Se mantienen los créditos y licencias correspondientes en el pie de página. El sitio necesita conexión a Internet para cargar estas fotografías.
