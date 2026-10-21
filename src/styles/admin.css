@@ -1,0 +1,33 @@
+/* Ajustes de Bootstrap + estilos del panel de administración */
+body { font-family: var(--font-body); }
+.btn { text-decoration: none; }
+.btn-outline-dark, .btn-outline-secondary, .btn-outline-danger, .btn-outline-light { background: transparent; }
+.btn-outline-dark { color: var(--petroleo); border-color: var(--petroleo); }
+.btn-outline-dark:hover { background: var(--petroleo); color: #fff; }
+.card { border-color: var(--linea); background: #fff; }
+a.card:hover { transform: translateY(-3px); box-shadow: var(--sombra) !important; transition: all .2s ease; }
+.form-control, .form-select { font-family: var(--font-body); }
+.qty-bs { width: 120px; flex-wrap: nowrap; }
+.qty-bs output { padding: 0.25rem 0.25rem; min-width: 2.5rem; }
+.site-nav { flex-wrap: wrap; row-gap: 4px; }
+.header-actions { flex-wrap: wrap; justify-content: flex-end; }
+.hero-compact .lead { max-width: 60ch; }
+.dest-card.h-100 { display: flex; flex-direction: column; }
+.dest-card .dest-body { flex: 1; }
+.auth-wrap { max-width: 560px; }
+.tab { cursor: pointer; }
+
+.admin-shell { min-height: 100vh; background: #f4f5f7; }
+.admin-top { background: var(--petroleo-dark); position: sticky; top: 0; z-index: 1030; }
+.admin-h1 { font-family: var(--font-display); color: var(--petroleo-dark); }
+.admin-sidebar { background: #fff; border-right: 1px solid var(--linea); }
+.admin-sidebar .nav-link { color: var(--petroleo); border-radius: 4px; }
+.admin-sidebar .nav-link.active { background: var(--petroleo); color: #fff; }
+@media (min-width: 992px) {
+  .admin-sidebar { position: sticky; top: 56px; align-self: flex-start; height: calc(100vh - 56px); overflow-y: auto; }
+}
+@media (max-width: 575.98px) {
+  .header-inner { gap: 12px; }
+  .hero h1 { font-size: 2rem; }
+}
+@media print { .admin-top, .admin-sidebar, .d-print-none { display: none !important; } }

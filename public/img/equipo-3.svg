@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Avatar ilustrado del integrante 3"><title>Avatar ilustrado del integrante 3</title>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d4a75a"/><stop offset="1" stop-color="#6b3d1f"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#g)"/>
+<path d="M60 400 Q60 290 200 280 Q340 290 340 400Z" fill="#faf6ec" opacity=".92"/>
+<rect x="176" y="236" width="48" height="52" rx="14" fill="#f0c9a4"/>
+<circle cx="200" cy="190" r="62" fill="#f0c9a4"/>
+<path d="M138 186 Q140 118 200 122 Q262 118 262 186 Q240 150 200 152 Q160 150 138 186Z" fill="#5a3a22"/>
+</svg>
